@@ -16,7 +16,7 @@ jobs:
       - name: Start message
         uses: ./
         with:
-          exolve-token: ${{ secrets.EXOLVE_TOKEN }}
-          receiver_phone:  ${{ env.DEVOPS_PHONE }}
-          service_phone :  ${{ env.SERVICE_PHONE }}
+          exolve-token: ${{secrets.EXOLVE_TOKEN }}
+          receiver_phone:  ${{env.DEVOPS_PHONE }}
+          service_phone :  ${{env.SERVICE_PHONE }}
           text: "Check pull request"
