@@ -9,11 +9,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ./smsinfo/
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '6.0.x'
+      - name: change folder
+        run: cd smsinfo
       - name: Install dependencies
         run: dotnet restore
       - name: Build
