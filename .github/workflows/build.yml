@@ -15,6 +15,8 @@ jobs:
           dotnet-version: '6.0.x'
       - name: change folder
         run: cd smsinfo
+      - name: dir
+        run: dir
       - name: Install dependencies
         run: dotnet restore
       - name: Build
