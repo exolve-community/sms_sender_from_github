@@ -13,13 +13,12 @@ jobs:
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: '6.0.x'
-      - name: change folder
-        run: cd smsinfo
-      - name: dir
-        run: dir
       - name: Install dependencies
+        working-directory: ./smsinfo
         run: dotnet restore
       - name: Build
+        working-directory: ./smsinfo
         run: dotnet build --configuration Release --no-restore
       - name: Test
+        working-directory: ./smsinfo
         run: dotnet test --no-restore --verbosity normal
