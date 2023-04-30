@@ -7,7 +7,6 @@ inputs: # если нужны какие-то внешние параметры
     required: true
   flag:
     description: 'This is flag that you can set to true or false'
-    default: false
     required: false
 runs:
   using: 'node12' # необходимая версия ноды – важно

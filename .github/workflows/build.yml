@@ -22,3 +22,6 @@ jobs:
       - name: Test
         working-directory: ./smsinfo
         run: dotnet test --no-restore --verbosity normal
+      - name: Build Alerts
+        if: ${{ failure() }}
+        uses: ./
