@@ -12,7 +12,8 @@ jobs:
       # 1 шаг необходим, чтобы использовать экшен из соседней папки
       - name: Check out repository 
         uses: actions/checkout@v3
-      - uses: ./
+      - name: Start messaging
+        uses: ./
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           flag: 123
