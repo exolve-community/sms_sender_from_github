@@ -2,7 +2,7 @@ name: 'Fancy name of the action'
 description: 'Short description'
 author: 'name I want to become famous with'
 inputs: # если нужны какие-то внешние параметры 
-  github-token:
+  exolve-token:
     description: 'This is a token to access github'
     required: true
   flag:
