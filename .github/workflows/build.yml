@@ -7,26 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Hello World
-        run: echo Hello, world!
-
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
     with:
       dotnet-version: '6.0.x'
     steps:
       - uses: actions/checkout@v3
-      - name: Setup .NET Core SDK ${{ matrix.dotnet-version }}
-        uses: actions/setup-dotnet@v3
+      - name: Setup .NET SDK
       - uses: ./smsinfo/
+        uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: ${{ matrix.dotnet-version }}
+          # Semantic version range syntax or exact version of a dotnet version
+          dotnet-version: '6.0.x'
       - name: Install dependencies
         run: dotnet restore
       - name: Build
