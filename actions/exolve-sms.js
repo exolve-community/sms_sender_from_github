@@ -8,7 +8,7 @@ const SERVICE_PHONE = core.getInput('service_phone')
 const TEXT = core.getInput('text')
 
 
-console.log('Hello, I am an action!'+RECEIVER_PHONE+ 'ET = ' + SERVICE_PHONE)
+console.log('Hello, I am an action!')
 
 
 
