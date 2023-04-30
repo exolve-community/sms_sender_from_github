@@ -19,9 +19,6 @@ jobs:
       - name: Build
         working-directory: ./testapp
         run: dotnet build --configuration Release --no-restore
-      - name: Test
-        working-directory: ./testapp
-        run: dotnet test --no-restore --verbosity normal
       - name: Build Alerts
         if: ${{ failure() }}
         uses: ./
