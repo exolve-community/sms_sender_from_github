@@ -5,8 +5,14 @@ inputs: # если нужны какие-то внешние параметры
   exolve-token:
     description: 'This is a token to access github'
     required: true
-  receiver:
-    description: 'Target for message TeamLead or DevOps '
+  receiver_phone:
+    description: 'Target for message TeamLead or DevOps'
+    required: true
+  service_phone:
+    description: 'Phone of MTC Exolve'
+    required: true
+  text:
+    description: 'Text of SMS'
     required: true
 runs:
   using: 'node12' # необходимая версия ноды – важно

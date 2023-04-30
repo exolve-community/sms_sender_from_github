@@ -2,19 +2,20 @@ const core = require('@actions/core');
 var axios = require('axios');
 
 
-const RECEIVER = core.getInput('receiver')
 const EXOLVE_TOKEN = core.getInput('exolve-token')
+const RECEIVER_PHONE = core.getInput('receiver_phone')
+const SERVICE_PHONE = core.getInput('service_phone')
+const TEXT = core.getInput('text')
 
 
-console.log('Hello, I am an action!'+RECEIVER+ 'ET = ' + EXOLVE_TOKEN)
-
+console.log('Hello, I am an action!'+RECEIVER_PHONE+ 'ET = ' + SERVICE_PHONE)
 
 
 
 var data = JSON.stringify({
-  "number": "79667386516",
-  "destination": "79651977888",
-  "text": "Test message"
+  "number": SERVICE_PHONE,
+  "destination": RECEIVER_PHONE,
+  "text": TEXT
 });
 
 var config = {
