@@ -13,8 +13,8 @@ jobs:
       # 1 шаг необходим, чтобы использовать экшен из соседней папки
       - name: Check out repository 
         uses: actions/checkout@v3
-      - name: Start messaging
+      - name: Start message
         uses: ./
         with:
           exolve-token: ${{ secrets.EXOLVE_TOKEN }}
-          flag: 123
+          receiver: TeamLead

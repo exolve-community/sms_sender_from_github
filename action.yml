@@ -5,9 +5,9 @@ inputs: # если нужны какие-то внешние параметры
   exolve-token:
     description: 'This is a token to access github'
     required: true
-  flag:
-    description: 'This is flag that you can set to true or false'
-    required: false
+  receiver:
+    description: 'Target for message TeamLead or DevOps '
+    required: true
 runs:
   using: 'node12' # необходимая версия ноды – важно
   main: 'actions/exolve-sms.js' # итоговый файл со всем кодом

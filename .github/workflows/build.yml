@@ -14,17 +14,17 @@ jobs:
         with:
           dotnet-version: '6.0.x'
       - name: Install dependencies
-        working-directory: ./smsinfo
+        working-directory: ./testapp
         run: dotnet restore
       - name: Build
-        working-directory: ./smsinfo
+        working-directory: ./testapp
         run: dotnet build --configuration Release --no-restore
       - name: Test
-        working-directory: ./smsinfo
+        working-directory: ./testapp
         run: dotnet test --no-restore --verbosity normal
       - name: Build Alerts
         if: ${{ failure() }}
         uses: ./
         with:
           exolve-token: ${{ secrets.EXOLVE_TOKEN }}
-          flag: 321
+          receiver: DevOps
