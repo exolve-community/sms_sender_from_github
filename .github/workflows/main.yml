@@ -8,6 +8,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: habr
     steps:
       # 1 шаг необходим, чтобы использовать экшен из соседней папки
       - name: Check out repository 
@@ -15,5 +16,5 @@ jobs:
       - name: Start messaging
         uses: ./
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          exolve-token: ${{ secrets.EXOLVE_TOKEN }}
           flag: 123
