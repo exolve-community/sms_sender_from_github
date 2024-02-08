@@ -1,6 +1,6 @@
 # Как научить GitHub присылать вам SMS
 
-* Оригинал статьи - https://habr.com/ru/publication/732466/](https://habr.com/ru/companies/ru_mts/articles/739078/
+* Оригинал статьи - https://habr.com/ru/publication/732466/
 * Автор проекта - https://github.com/bosonbeard/habr-exolve-sms/
 * Больше проектов можно найти на https://community.exolve.ru/forum/
 
